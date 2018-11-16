@@ -33,6 +33,7 @@ export class SmartTableComponent {
       id: {
         title: 'ID',
         type: 'number',
+        filter: false,
       },
       firstName: {
         title: 'First Name',

@@ -14,6 +14,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SpinnerService } from './taitra/shared/spinner/spinner.service';
+import { SpinnerComponent } from './taitra/shared/spinner/spinner.component';
+import { NbSpinnerModule } from '@nebular/theme/components/spinner/spinner.module';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,13 +26,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    // NbSpinnerModule,
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent,
+    // SpinnerComponent
+  ],
   providers: [
+    // SpinnerService,
     { provide: APP_BASE_HREF, useValue: '/' },
   ],
 })

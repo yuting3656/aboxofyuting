@@ -1,0 +1,60 @@
+
+<nb-card accent="primary">
+  <nb-card-body>
+     <nb-card-header> 權限角色維護</nb-card-header>
+  <hr>
+
+  <nb-card-body class="row">
+    <nb-card-body class="col-sm-4">
+        <div style="font-weight: bold">權限角色 <hr></div>
+      <form>
+        <div class="form-group row">
+          <label for="inputEmail1" class="col-sm-12 col-form-label d-flex justify-content-start">角色名稱</label>
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="inputEmail1" placeholder="SuperAdmin">
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail1" class="col-sm-12 col-form-label d-flex justify-content-start">狀態</label>
+            <div class="col-sm-12">
+              <select class="form-control">
+                <option >啟用</option>
+                <option >關閉</option>
+              </select>
+              <!-- <input type="email" class="form-control" id="inputEmail1" placeholder="啟用"> -->
+            </div>
+          </div>
+        <div class="form-group row">
+          <label for="inputPassword2" class="col-sm-12 col-form-label  d-flex justify-content-start">描述</label>
+          <div class="col-sm-12">
+              <textarea rows="4" cols="50" type="password" class="form-control" id="inputPassword2">所有權限都開啟</textarea>
+          </div>
+        </div>
+      </form>
+    </nb-card-body>
+
+    <nb-card-body class="col-sm-8">
+         <div style="font-weight: bold">綁定系統帳號<hr></div>
+           <ng2-smart-table [settings]="adminAccountSourceSetting" [source]="adminAccountSource"> </ng2-smart-table>
+    </nb-card-body>
+  
+  </nb-card-body>
+
+  <nb-card-body class="row">
+      <nb-card-body class="col-sm-12">
+          <div style="font-weight: bold">功能權限<hr></div>
+          <ng2-smart-table [settings]="moduleSourceSetting" [source]="moduleSource"> </ng2-smart-table>
+      </nb-card-body> 
+  </nb-card-body>
+
+  <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">確定</button>
+  </div>
+ 
+  <div class="d-flex justify-content-end" (click)="goback()">
+    <button style="margin-left: 5px" class="btn btn-warning">回上一頁</button>
+  </div>
+
+</nb-card-body>
+</nb-card>
+

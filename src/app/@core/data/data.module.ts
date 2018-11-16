@@ -16,6 +16,7 @@ import { OrdersProfitChartService } from './orders-profit-chart.service';
 import { TrafficBarService } from './traffic-bar.service';
 import { ProfitBarAnimationChartService } from './profit-bar-animation-chart.service';
 import { LayoutService } from './layout.service';
+import { SmartTableAdminService } from './smart-table-admin.service';
 
 const SERVICES = [
   UserService,
@@ -33,6 +34,8 @@ const SERVICES = [
   TrafficBarService,
   ProfitBarAnimationChartService,
   LayoutService,
+  // 自製假Service
+  SmartTableAdminService
 ];
 
 @NgModule({

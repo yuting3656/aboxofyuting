@@ -1,0 +1,55 @@
+
+  <nb-card accent="active" class="card-height-xxsmall">
+  <!-- <nb-card-header>新增/搜尋</nb-card-header> -->
+  <nb-card-body>
+    <form>
+      <div class="row">
+        <div class="col-sm-2">
+            <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+            <div class="d-flex justify-content-center"><button class="btn btn-success" (click)="addAdmin()">新增</button></div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="searchContry">國別</label>
+            <input type="text" class="form-control" id="searchContry" placeholder="國別">
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="searchName">姓名</label>
+            <input type="text" class="form-control" id="searchName" placeholder="姓名">
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="searchTellphone">行動電話</label>
+            <input type="email" class="form-control" id="searchTellphone" placeholder="行動電話">
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="searchEmail">E-mail</label>
+            <input type="text" class="form-control" id="searchEmail" placeholder="E-mail">
+          </div>
+        </div>
+    
+         <div class="col-sm-2">
+            <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+            <div><button type="submit" class="btn btn-primary">搜尋</button></div>
+          </div>
+      </div>
+    </form>
+  </nb-card-body>
+  </nb-card>
+
+
+  <nb-card accent="primary">
+      <nb-card-header>
+        系統帳號
+      </nb-card-header>
+      <nb-card-body>
+          <!-- (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="test($event)" -->
+        <ng2-smart-table [settings]="settings" [source]="source">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
