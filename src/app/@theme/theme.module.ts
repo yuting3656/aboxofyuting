@@ -101,7 +101,7 @@ const PIPES = [
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'corporate', //改 default 的 theme!!! 
+      name: 'corporate', //改 default 的 theme!!! default, corporate, cosmic 
     },
     [ DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME ],
   ).providers,

@@ -11,19 +11,57 @@ export class EditAdminListRolePageComponent implements OnInit {
 
 //　綁定系統帳號
   adminAccountSourceSetting = {
-    actions: false,
-    hideSubHeader: true,
+    actions:{
+      edit: false,
+      add: true,
+      position: 'right',
+      columnTitle: '動作',
+    },
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    // edit: {
+    //   editButtonContent: '<i class="nb-edit"></i>',
+    //   saveButtonContent: '<i class="nb-checkmark"></i>',
+    //   cancelButtonContent: '<i class="nb-close"></i>',
+    // },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+    },
+    // actions: false,
+    // hideSubHeader: true,
     columns: {
       account:{
         title: '帳號',
         type: 'string',
         filter: false,
+        // 客製化選單
+        editor:{
+          type: 'list',
+          config:{
+            list: [{
+              title: 'sysadmin2',
+              value: 'sysadmin2'
+            }, {
+              title: 'hywebsysadmin',
+              value: 'hywebsysadmin'
+            }, {
+              title: 'admin',
+              value: 'admin',
+            }, {
+              title: 'admin4',
+              value: 'admin4'
+            }]
+          },
+        // }
       },
-      name:{
-        title: '姓名',
-        type: 'string',
-        filter: false,
-      },
+      // name:{
+      //   title: '姓名',
+      //   type: 'string',
+      //   filter: false,
+      // },
       // email:{
       //   title: 'E-mail',
       //   type: 'string',
@@ -36,6 +74,7 @@ export class EditAdminListRolePageComponent implements OnInit {
       // }
     }
   }
+}
 
   adminAccountSource=[
     {

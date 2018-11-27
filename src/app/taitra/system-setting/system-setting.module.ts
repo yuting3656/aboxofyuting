@@ -11,14 +11,24 @@ import { AddSystemAdminPageComponent } from './edit-system-admin/add-system-admi
 import { EditSystemPasswordPageComponent } from './edit-system-admin/edit-system-password-page/edit-system-password-page.component';
 import { EditAdminListRolesButtonRenderComponent } from './edit-admin-list-roles/edit-admin-list-roles-button-render/edit-admin-list-roles-button-render.component';
 import { EditAdminListRolePageComponent } from './edit-admin-list-roles/edit-admin-list-role-page/edit-admin-list-role-page.component';
+import { DigLoginLogComponent } from '../dig-log/dig-login-log/dig-login-log.component';
+import { AdminLoginLogComponent } from './admin-login-log/admin-login-log.component';
+import { SystemDataEditLogComponent } from './system-data-edit-log/system-data-edit-log.component';
+import { SystemDataEditLogButtonRenderComponent } from './system-data-edit-log/system-data-edit-log-button-render/system-data-edit-log-button-render.component';
+import { SystemDataEditLogPageComponent } from './system-data-edit-log/system-data-edit-log-page/system-data-edit-log-page.component';
+import { CKEditorModule } from 'ng2-ckeditor';
+import { EmailTemplateEditorComponent } from './email-template-editor/email-template-editor.component';
+import { EmailTmplatePageComponent } from './email-template-editor/email-tmplate-page/email-tmplate-page.component';
+import { EmailTemplateEditorLinkRenderComponent } from './email-template-editor/email-template-editor-link-render/email-template-editor-link-render.component';
 
 @NgModule({
     imports:[
         ThemeModule,
         SystemSettingRoutingModule,
-        Ng2SmartTableModule
+        Ng2SmartTableModule,
+        CKEditorModule
         
-        
+            
     ],
     declarations:[
         SystemSettingComponent,
@@ -29,12 +39,23 @@ import { EditAdminListRolePageComponent } from './edit-admin-list-roles/edit-adm
         AddSystemAdminPageComponent,
         EditSystemPasswordPageComponent,
         EditAdminListRolesButtonRenderComponent,
-        EditAdminListRolePageComponent
+        EditAdminListRolePageComponent,
+        AdminLoginLogComponent,
+        SystemDataEditLogComponent,
+        SystemDataEditLogButtonRenderComponent,
+        SystemDataEditLogPageComponent,
+        EmailTemplateEditorComponent,
+        EmailTmplatePageComponent,
+        EmailTemplateEditorLinkRenderComponent,
+        
     ],
     providers:[],
     entryComponents:[
         EditSystemAdminButtonRenderComponent,
-        EditAdminListRolesButtonRenderComponent
+        EditAdminListRolesButtonRenderComponent,
+        SystemDataEditLogButtonRenderComponent,
+        // email template 的超連結
+        EmailTemplateEditorLinkRenderComponent,
     ],
 })
 

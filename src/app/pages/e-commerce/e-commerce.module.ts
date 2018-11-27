@@ -30,7 +30,7 @@ import {
 import {
   ECommerceVisitorsStatisticsComponent,
 } from './visitors-analytics/visitors-statistics/visitors-statistics.component';
-// import { ECommerceLegendChartComponent } from './legend-chart/legend-chart.component';
+import { ECommerceLegendChartComponent } from './legend-chart/legend-chart.component';
 import { ECommerceUserActivityComponent } from './user-activity/user-activity.component';
 import { ECommerceProgressSectionComponent } from './progress-section/progress-section.component';
 import { SlideOutComponent } from './slide-out/slide-out.component';
@@ -78,7 +78,7 @@ import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earni
     ECommerceVisitorsAnalyticsComponent,
     ECommerceVisitorsAnalyticsChartComponent,
     ECommerceVisitorsStatisticsComponent,
-    // ECommerceLegendChartComponent,
+    ECommerceLegendChartComponent,
     ECommerceUserActivityComponent,
     ECommerceProgressSectionComponent,
     SlideOutComponent,

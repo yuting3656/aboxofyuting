@@ -1,0 +1,85 @@
+<nb-card accent="active">
+  <nb-card-header></nb-card-header>
+  <nb-card-body>
+    <div class="d-flex justify-content-center">
+      <h1>{{editData.name}}</h1>
+    </div>
+    <!--外圍大的-->
+    <div class="row">
+      <!-- col 內圈範圍的 -->
+
+
+      <!-- 左半區的內容 -->
+      <div class="col-sm-6">
+        <div class="d-flex justify-content-center">
+          <h3>API 資訊</h3>
+        </div>
+
+        <form>
+          <!-- api name   -->
+          <div class="form-group row">
+            <label for="inputEmail1" class="col-sm-3 col-form-label d-flex justify-content-end">API 名稱:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="" id="" placeholder="{{editData.name}}" value="{{editData.name}}">
+            </div>
+          </div>
+
+
+          <!-- api name   -->
+          <div class="form-group row">
+            <label for="inputEmail1" class="col-sm-3 col-form-label d-flex justify-content-end">API URL:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="" id="" placeholder="{{editData.apiUrl}}" value="{{editData.apiUrl}}"
+                readonly>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail1" class="col-sm-3 col-form-label d-flex justify-content-end">API 啟用:</label>
+            <div class="col-sm-6">
+              <select class="form-control" name="" id="" value="{{editData.status}}">
+                <option value="enable">啟用</option>
+                <option value="disable">關閉</option>
+              </select>
+            </div>
+          </div>
+
+        </form>
+      </div><!-- 左半區的內容 -->
+
+
+      　　　　
+      <!-- 右半區的內容 -->
+      <div class="col-sm-6">
+        <div class="d-flex justify-content-center">
+          <h3>各服務介接情況</h3>
+        </div>
+
+        <form>
+          <div *ngFor="let source of sources; let i = index">
+            <div class="form-group row">
+              <label for="inputEmail1" class="col-sm-3 col-form-label d-flex justify-content-end">{{source.service}}:</label>
+              <div class="col-sm-6">
+                <select class="form-control" name="" id="" value="{{source.status}}">
+                  <option value="enable">啟用</option>
+                  <option value="disable">關閉</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div><!-- 右半區的內容 -->
+      　　　　
+
+
+    </div>
+
+    <!-- 下方確認按鈕　和　回上一頁-->
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">確定</button>
+    </div>
+    <div class="d-flex justify-content-end" (click)="goback()">
+      <button style="margin-left: 5px" class="btn btn-warning">回上一頁</button>
+    </div>
+  </nb-card-body>
+</nb-card>

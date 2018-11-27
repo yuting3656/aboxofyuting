@@ -1,0 +1,123 @@
+<nb-card accent="primary">
+  <nb-card-body>
+    <nb-card-header> 登入紀錄</nb-card-header>
+    <hr>
+
+    <!-- 搜尋的bar -->
+    <nb-card-body>
+      <form>
+        <div class="row">
+
+          <div class="col-sm-2">
+            <!-- <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+                      <div class="d-flex justify-content-center"><button class="btn btn-success" (click)="addAdmin()">新增</button></div> -->
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="searchContry">姓名</label>
+              <input type="text" class="form-control" id="searchContry" placeholder="姓名">
+            </div>
+          </div>
+
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="searchEmail">登入時間</label>
+              <!-- <input type="text" class="form-control" id="searchEmail" placeholder="登入時間"> -->
+              <!-- <ngb-datepicker #d></ngb-datepicker> -->
+              <!-- <input type="text" class="form-control" ngbDatepicker #d="ngbDatepicker" placeholder="登入時間"/> -->
+              <div class="input-group">
+                <input class="form-control" placeholder="登入時間" name="dp" [(ngModel)]="model_2" ngbDatepicker #d="ngbDatepicker"
+                  readonly>
+                <div class="input-group-append">
+                  <button class="btn-outline  fa fa-calendar-alt fa-2x" (click)="d.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div classs="col-sm-2">
+            <div class="form-group">
+              <label style="visibility: hidden"> ~ </label>
+              <div class="input-group">
+                <div class="d-flex justify-content-center" stye="">
+                  ~
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="searchEmail" style="visibility: hidden">登入時間</label>
+              <div class="input-group">
+                <input class="form-control" placeholder="登入時間" name="dp" [(ngModel)]="model" ngbDatepicker #d_2="ngbDatepicker"
+                  readonly>
+                <div class="input-group-append">
+                  <button class="btn-outline  fa fa-calendar-alt fa-2x" (click)="d_2.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <label for=""><i style="visibility: hidden" class="nb-search"></i></label>
+            　<div class="d-flex justify-content-start">
+              　　<button type="submit" class="btn btn-primary">搜尋</button>
+              　　<button style="margin-left: 5px" class="btn btn-primary" (click)="HomeMadeToggle()">{{buttonName}}</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        　
+        <!--隱藏的進階選項-->
+        <div *ngIf="show">
+          <div class="row">
+
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2"></div>
+
+
+            <div class="col-sm-2">
+              <div class="from-group">
+                <label class="">登入狀況:</label>
+                <select name="" id="" class="form-control">
+                  <option value="">成功</option>
+                  <option value="">密碼錯誤</option>
+                  <option value="">帳號不存在</option>
+                </select>
+              </div>
+            </div>
+
+
+            <!-- <div class="dropdown input-group-prepend input-group-btn" ngbDropdown>
+                  <button type="button" class="btn btn-success dropdown-toggle" ngbDropdownToggle>
+                    登入狀況
+                  </button>
+                  <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li class="dropdown-item">成功</li>
+                    <li class="dropdown-item">密碼錯誤</li>
+                    <li class="dropdown-item">帳號不存在</li>
+                  </ul>
+                </div> -->
+
+          </div><!-- row -->
+        </div><!-- ngIf="show" -->
+
+      </form>
+    </nb-card-body>
+
+    <nb-card-body>
+      <!-- (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="test($event)" -->
+      <ng2-smart-table [settings]="settings" [source]="source">
+      </ng2-smart-table>
+    </nb-card-body>
+
+  </nb-card-body>
+
+
+</nb-card>

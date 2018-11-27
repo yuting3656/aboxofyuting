@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 })
 export class EditSystemAdminComponent implements OnInit {
 
+  content = ``;
+
   source: LocalDataSource = new LocalDataSource();
 
   settings = {
@@ -69,4 +71,7 @@ export class EditSystemAdminComponent implements OnInit {
     }, 800)
   }
 
+  ok(){
+    alert(this.content)
+  }
 }

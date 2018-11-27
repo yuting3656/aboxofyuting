@@ -16,6 +16,13 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { NbAccordionModule } from '@nebular/theme';
 import { EditMembersButtonRenderComponent } from './edit-members/edit-members-button-render/edit-members-button-render.component';
 import { EditMemberPageComponent } from './edit-members/edit-member-page/edit-member-page.component';
+import { MemberLoginLogComponent } from './member-login-log/member-login-log.component';
+import { MemeberSearchComponent } from './memeber-search/memeber-search.component';
+import { MemberBatchUpdatePageComponent } from './edit-members/member-batch-update-page/member-batch-update-page.component';
+import { CompanySearchComponent } from './company-search/company-search.component';
+import { TaitraCompanyFakeDataService } from '../shared/data/taitra-company-fake-data.service';
+import { MemberUpdateLogComponent } from './member-update-log/member-update-log.component';
+import { TaitraMemberUpdateLogFakeDataService } from '../shared/data/taitra-member-update-log-fake-data.service';
 // import { NbAccordionModule } from '@nebular/theme/components/accordion/accordion.module';
 
 
@@ -39,8 +46,16 @@ import { EditMemberPageComponent } from './edit-members/edit-member-page/edit-me
         // smart table button render 
         EditMembersButtonRenderComponent,
         EditMemberPageComponent,
+        MemberLoginLogComponent,
+        MemeberSearchComponent,
+        MemberBatchUpdatePageComponent,
+        CompanySearchComponent,
+        MemberUpdateLogComponent,
     ],
-    providers: [],
+    providers: [
+        TaitraCompanyFakeDataService,
+        TaitraMemberUpdateLogFakeDataService
+    ],
     entryComponents:[
         EditMembersButtonRenderComponent
     ]

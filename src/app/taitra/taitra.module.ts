@@ -16,6 +16,7 @@ import { TaitraComponent } from './taitra.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { SpinnerService } from './shared/spinner/spinner.service';
 import { NbSpinnerModule } from '@nebular/theme/components/spinner/spinner.module';
+import { TaitraCompanyFakeDataService } from './shared/data/taitra-company-fake-data.service';
 
 
 const Taitra_COMPONENTS = [
@@ -37,7 +38,9 @@ const Taitra_COMPONENTS = [
         
     ],
     providers: [
-        SpinnerService
+        SpinnerService,
+        TaitraCompanyFakeDataService,
+        
     ],
 })
 

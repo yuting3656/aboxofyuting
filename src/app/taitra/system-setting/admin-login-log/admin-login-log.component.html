@@ -1,0 +1,57 @@
+
+  
+    <nb-card accent="primary">
+      <nb-card-body>
+          <nb-card-header>登入紀錄</nb-card-header>
+          <hr>
+          <!-- 上方搜尋-->
+          <nb-card-body>
+            <form>
+              <div class="row d-flex justify-content-center">
+      
+                <!-- <div class="col-sm-3">
+                    <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+                    <div class="d-flex justify-content-center"><button class="btn btn-success" (click)="addAdmin()">新增</button></div>
+                </div> -->
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <div class="form-group">
+                    <label for="searchContry">系統帳號</label>
+                    <input type="text" class="form-control" id="searchContry" placeholder="系統帳號">
+                  </div>
+                </div>
+      
+                <div class="col-sm-2">
+                  <div class="form-group">
+                    <label for="searchName">登入時間</label>
+                    <input type="text" class="form-control" id="searchName" placeholder="登入時間">
+                  </div>
+                </div>
+      
+                <div class="col-sm-2">
+                  <div class="form-group">
+                    <label for="searchName">IP</label>
+                    <input type="text" class="form-control" id="searchName" placeholder="IP">
+                  </div>
+                </div>
+      
+            
+                <div class="col-sm-2">
+                  <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+                  <div><button type="submit" class="btn btn-primary">搜尋</button></div>
+                </div>
+              </div>
+            </form>
+            </nb-card-body>  
+
+          <!-- 下方table-->
+          <nb-card-body>
+            <!-- (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="test($event)" -->
+            <ng2-smart-table [settings]="settings" [source]="source">  
+            </ng2-smart-table>
+          </nb-card-body>
+
+      </nb-card-body>
+
+      </nb-card>

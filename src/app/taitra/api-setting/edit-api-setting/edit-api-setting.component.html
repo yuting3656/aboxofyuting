@@ -1,0 +1,27 @@
+<nb-card accent="primary">
+    <nb-card-body>
+       <nb-card-header>服務總攬</nb-card-header>
+       <hr>
+ 
+       <!-- 新增 -->
+       <nb-card-body>
+             <!-- <div class="row">
+                 <div class="col-sm-2">
+                     <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+                     <div class="d-flex justify-content-center"><button class="btn btn-success" (click)="addAdmin()">新增</button></div>
+                 </div>
+             </div> -->
+       </nb-card-body>
+ 
+    <nb-card-body>
+         <ng2-smart-table [settings]="settings" [source]="source">
+         </ng2-smart-table>
+    </nb-card-body>
+     
+       <!-- <div class="d-flex justify-content-center">
+             <button type="submit" class="btn btn-primary">確定</button>
+           </div> -->
+ 
+    </nb-card-body>
+ 
+   </nb-card>

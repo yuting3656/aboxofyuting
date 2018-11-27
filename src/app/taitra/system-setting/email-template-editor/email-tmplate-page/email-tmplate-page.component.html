@@ -1,0 +1,71 @@
+<!-- <nb-card accent="primary">
+    <nb-card-body>
+      <nb-card-header> Email 維護</nb-card-header>
+      <hr>
+      <ngx-tiny-mce #teatArea ></ngx-tiny-mce>
+  
+    </nb-card-body>
+  
+    <nb-card-footer> 
+      <div class="d-flex justify-content-center">
+          <button class="btn btn-primary" (click)="ok(teatArea)">OK</button>
+      </div>   
+    </nb-card-footer>
+  </nb-card>
+   -->
+
+<nb-card accent="primary">
+  <nb-card-body>
+    <nb-card-header> </nb-card-header>
+    <!-- <hr> -->
+
+    <!-- 維護器　-->
+    <nb-card-body>
+      <h3> Email範本 維護</h3>
+      <hr>
+
+      <!-- 範本名字 -->
+      <div class="form-group row">
+        <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">範本名字:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <!-- 範本代碼 -->
+      <div class="form-group row">
+        <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">範本代碼:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <!-- 使用狀態 -->
+      <div class="form-group row">
+        <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">使用狀態:</label>
+        <div class="col-sm-3">
+          　<select name="" id="" class="form-control">
+            　　 <option value="">啟動</option>
+            　　 <option value="">關閉</option>
+            　　</select>
+        </div>
+      </div>
+
+    </nb-card-body>
+
+    <!-- 編輯器-->
+    <nb-card-body>
+      <h3> Email範本 編輯</h3>
+
+      <hr>
+
+      <ngx-tiny-mce #teatArea></ngx-tiny-mce>
+
+    </nb-card-body>
+  </nb-card-body>
+
+
+  <nb-card-footer>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary" (click)="ok(teatArea)">OK</button>
+    </div>
+  </nb-card-footer>
+</nb-card>

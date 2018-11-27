@@ -10,16 +10,16 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 // charts  
-import { ECommerceChartsPanelComponent } from './charts-panel/charts-panel.component';
-import { ChartPanelSummaryComponent } from './charts-panel/chart-panel-summary/chart-panel-summary.component';
-import { ChartPanelHeaderComponent } from './charts-panel/chart-panel-header/chart-panel-header.component';
-import { ECommerceLegendChartComponent } from '../../pages/e-commerce/legend-chart/legend-chart.component';
+// import { ECommerceChartsPanelComponent } from './charts-panel/charts-panel.component';
+// import { ChartPanelSummaryComponent } from './charts-panel/chart-panel-summary/chart-panel-summary.component';
+// import { ChartPanelHeaderComponent } from './charts-panel/chart-panel-header/chart-panel-header.component';
+// import { ECommerceLegendChartComponent } from '../../pages/e-commerce/legend-chart/legend-chart.component';
 
 
 // service 
-import { OrdersChartService } from '../../@core/data/orders-chart.service';
-import { LayoutService } from '../../@core/data/layout.service';
-import { OrdersProfitChartService } from '../../@core/data/orders-profit-chart.service';
+  // import { OrdersChartService } from '../../@core/data/orders-chart.service';
+  // import { LayoutService } from '../../@core/data/layout.service';
+  // import { OrdersProfitChartService } from '../../@core/data/orders-profit-chart.service';
 
 @NgModule({
     imports:[

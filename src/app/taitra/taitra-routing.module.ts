@@ -27,6 +27,18 @@ const routes: Routes = [{
       path: 'system-setting',
       loadChildren: './system-setting/system-setting.module#SystemSettingModule'
     },
+    {
+      path:'rule-setting',
+      loadChildren: './rule-setting/rule-setting.module#RuleSettingModule',
+    },
+    {
+      path: 'front-page',
+      loadChildren: './front-page/front-page.module#FrontPageModule'
+    },
+    {
+      path: 'api-setting',
+      loadChildren: './api-setting/api-setting.module#ApiSettingModule'
+    },
   ],
 }];
 

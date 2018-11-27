@@ -13,11 +13,18 @@ import { Router } from '@angular/router';
 
 export class EditMembersComponent implements OnInit {
 
+  // toggle button attribute
+  show:boolean = false;
+  buttonName: string = '進階';
+
   ngOnInit(){
     
   }
 
-  settings = {
+  settings = { 
+    mode: 'click-to-edit',
+
+    selectMode: 'multi', // single | multi  
     actions: false,
     // 可以把多的　row 隱藏~~~
     hideSubHeader: true,
@@ -37,6 +44,7 @@ export class EditMembersComponent implements OnInit {
     //   confirmDelete: true,
     // },
     columns: {
+
       contry: {
         title: '國別',
         type: 'number',
@@ -66,6 +74,11 @@ export class EditMembersComponent implements OnInit {
         type: 'string',
         filter: false,
       },
+      memberStatus:{
+        title: '會員類型',
+        type: 'string',
+        filter: false,
+      },
       // lastName: {
       //   title: 'Last Name',
       //   type: 'string',
@@ -86,21 +99,33 @@ export class EditMembersComponent implements OnInit {
         type: 'number',
         filter: false,
       },
-      fax: {
-        title: '傳真電話',
-        type: 'number',
+      createDate: {
+        title: '註冊時間',
+        type: 'string',
         filter: false,
       },
-      address: {
-        title: '地址',
-        type: 'number',
-        filter: false,
-      },
+      // fax: {
+      //   title: '傳真電話',
+      //   type: 'number',
+      //   filter: false,
+      // },
+      // address: {
+      //   title: '地址',
+      //   type: 'number',
+      //   filter: false,
+      // },
       edit: {
         title: '維護',
         type: 'custom',
         filter: false,
         renderComponent: EditMembersButtonRenderComponent,
+        valuePrepareFunction: (cell, row) => {
+          console.log(row),
+          console.log(cell)
+        },
+        // onComponentInitFunction: (instance) => {
+        //   console.log(instance)
+        // }
         // 調整寬度而~
         // width: '10%',
       }
@@ -131,6 +156,25 @@ export class EditMembersComponent implements OnInit {
     } else {
         event.confirm.reject();
     }
+  }
+
+  HomeMadeToggle(){
+    this.show  = !this.show;
+    // chamge buttom name 
+    if (this.show) {
+      this.buttonName = '縮回'
+    } else {
+　　　this.buttonName = '進階'
+    }
+  }
+
+
+  onRowSelect(row: any){
+    console.log(row)    
+  }
+
+  batchAdd(){
+    this.router.navigate(['/taitra/members/edit-members/memeber-batch-update-page'])
   }
 
 

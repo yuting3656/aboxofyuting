@@ -14,38 +14,62 @@
           <div class="form-group row">
             <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">姓名</label>
             <div class="col-sm-6">
-              <input type="password" class="form-control" id="inputPassword2" placeholder="王大明">
+              <input type="password" class="form-control" placeholder="王大明">
             </div>
           </div>
 
           <div class="form-group row">
               <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">行動電話</label>
               <div class="col-sm-6">
-                <input type="password" class="form-control" id="inputPassword2" placeholder="0933123456">
+                <input type="password" class="form-control" placeholder="0933123456">
               </div>
           </div>
 
           <div class="form-group row">
               <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">連絡電話</label>
               <div class="col-sm-6">
-                <input type="password" class="form-control" id="inputPassword2" placeholder="0223451234">
+                <input type="password" class="form-control" placeholder="0223451234">
               </div>
           </div>
 
           <div class="form-group row">
               <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">傳真電話</label>
               <div class="col-sm-6">
-                <input type="password" class="form-control" id="inputPassword2" placeholder="0244987311">
+                <input type="password" class="form-control"  placeholder="0244987311">
               </div>
           </div>
 
           <div class="form-group row">
               <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">地址</label>
               <div class="col-sm-6">
-                <input type="password" class="form-control" id="inputPassword2" placeholder="北市湖湖路九段頁頁巷">
+                <input type="password" class="form-control" placeholder="北市湖湖路九段頁頁巷">
               </div>
           </div>
 
+          <div class="form-group row">
+              <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">會員類型</label>
+              <div class="col-sm-6 ">
+                  <select class="form-control">
+                      <option>一般會員</option>
+                      <option>公司會員</option>
+                      <option>快速會員</option>
+                    </select>
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">關聯公司</label>
+              <div class="col-sm-6">
+                  <input type="text" class="form-control" placeholder="台積電" value="台積電" readonly>
+                </div>
+          </div>
+          
+          <div class="form-group row">
+              <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">註冊時間</label>
+              <div class="col-sm-6">
+                <span class="form-control"> 2016/04/19 19:24</span>
+              </div>
+          </div>
 
           <!-- <div class="form-group row">
             <label class="col-sm-3">Radios</label>
@@ -84,4 +108,22 @@
             </div>
         </form>
       </nb-card-body>
+  </nb-card>
+
+
+  <nb-card accent="active">
+      <nb-card-header>王大明的紀錄</nb-card-header>
+      <nb-card-body>
+
+          <nb-card-body>
+            <ng2-smart-table [settings]="settings" [source]="source">
+            </ng2-smart-table>
+          </nb-card-body>
+
+      </nb-card-body>
     </nb-card>
+
+
+
+
+

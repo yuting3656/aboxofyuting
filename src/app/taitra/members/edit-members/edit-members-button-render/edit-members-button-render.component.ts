@@ -9,8 +9,11 @@ import { SpinnerService } from '../../../shared/spinner/spinner.service';
 })
 
 export class EditMembersButtonRenderComponent implements OnInit {
-  
-  @Input() Value;
+  renderValue: string;
+  rendetCellValue;
+
+  // 從smart table 送過來得～～
+  @Input() rowData: any;
 
   constructor( 
     private router: Router,
@@ -19,8 +22,10 @@ export class EditMembersButtonRenderComponent implements OnInit {
 
   }
 
-  ngOnInit(){  
+  ngOnInit(){
+    this.renderValue = this.rowData.email
   }  
+
 
   goEdit(){
     // 先loading 

@@ -18,7 +18,9 @@ export class HeaderComponent implements OnInit {
 
   user: any;
 
-  userMenu = [ { title: 'Log out' }];
+
+  // Log out
+  userMenu = [ { title: '登出' }];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -48,7 +50,7 @@ export class HeaderComponent implements OnInit {
 
   goToHome() {
     // this.menuService.navigateHome();
-    this.router.navigate['/pages']
+    this.router.navigate['/taitra/taitra-dashboard']
   }
 
   startSearch() {

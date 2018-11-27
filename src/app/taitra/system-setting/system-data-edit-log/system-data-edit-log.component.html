@@ -1,0 +1,86 @@
+
+<nb-card accent="primary">
+<nb-card-body>
+  <nb-card-header>異動紀錄</nb-card-header>
+  <hr>
+  <!-- upper search bar-->
+  <nb-card-body>
+      <form>
+          <div class="row d-flex justify-content-center">
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="searchContry">系統帳號</label>
+                <input type="text" class="form-control" id="searchContry" placeholder="系統帳號">
+              </div>
+            </div>
+<!-- 
+            <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="searchName">異動項目</label>
+                  <input type="text" class="form-control" id="searchName" placeholder="登入時間">
+                </div>
+              </div> -->
+  
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="searchName">IP</label>
+                <input type="text" class="form-control" id="searchName" placeholder="IP">
+              </div>
+            </div>
+            
+            <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="searchEmail">異動時間</label>
+                  <!-- <input type="text" class="form-control" id="searchEmail" placeholder="登入時間"> -->
+                  <!-- <ngb-datepicker #d></ngb-datepicker> -->
+                  <!-- <input type="text" class="form-control" ngbDatepicker #d="ngbDatepicker" placeholder="登入時間"/> -->
+                  <div class="input-group">
+                      <input class="form-control" placeholder="異動時間"
+                             name="dp" [(ngModel)]="model_2" ngbDatepicker #d="ngbDatepicker" readonly>
+                      <div class="input-group-append">
+                        <button class="btn-outline  fa fa-calendar-alt fa-2x" (click)="d.toggle()" type="button"></button>
+                      </div>
+                    </div>  
+                </div>
+              </div>
+              
+              <div classs="col-sm-1"> 
+                <div class="form-group">
+                  <label style="visibility: hidden"> ~ </label>
+                  <div class="input-group"> 
+                    <div class="" stye="">
+                       ~
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-sm-2">
+                  <div class="form-group">
+                    <label for="searchEmail" style="visibility: hidden">異動時間</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="異動時間"
+                               name="dp" [(ngModel)]="model" ngbDatepicker #d_2="ngbDatepicker" readonly>
+                        <div class="input-group-append">
+                          <button class="btn-outline  fa fa-calendar-alt fa-2x" (click)="d_2.toggle()" type="button"></button>
+                        </div>
+                      </div>  
+                  </div>
+                </div>
+        
+            <div class="col-sm-1">
+              <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+              <div><button type="submit" class="btn btn-primary">搜尋</button></div>
+            </div>
+          </div>
+        </form>
+  </nb-card-body>
+
+
+ <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source">  
+    </ng2-smart-table>
+  </nb-card-body>
+
+</nb-card-body>
+</nb-card>

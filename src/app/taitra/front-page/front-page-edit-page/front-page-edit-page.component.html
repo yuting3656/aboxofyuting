@@ -1,0 +1,67 @@
+<nb-card accent="primary">
+  <nb-card-body>
+    <nb-card-header>
+      {{editData.name}}
+    </nb-card-header>
+
+    <form>
+      <!-- 名稱 -->
+      <div class="form-group row">
+        <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">服務名稱:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="{{editData.name}}" value="{{editData.name}}">
+        </div>
+      </div>
+      <!-- "../../../../assets/images/{{editData.imgUrl}}.jpg" -->
+      <!-- 照片 -->
+      <div class="form-group row">
+        <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">照片:</label>
+        
+        <div class="col-sm-3">
+            <input type="file" class="form-control">
+        </div>
+        <div class="col-sm-3">
+          <span type="password" class="form-control d-flex justify-content-center" placeholder="editData.name">
+            <img width="200px" src="../../../../assets/images/{{editData.imgUrl}}.jpg"/> 
+          </span>
+        </div>
+      </div>
+
+      <!-- 　Service key  -->
+      <div class="form-group row">
+        <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">Service-Key:</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="SrcKeyValue">
+        </div>
+        <div class="col-sm-3 ">
+          <div>
+              <button class="btn btn-info"  (click)="genereateUUID()" >產生</button>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="form-group row">
+          <label for="inputPassword2" class="col-sm-3 col-form-label  d-flex justify-content-end">前台顯示:</label>
+          <!-- <ngx-switcher></ngx-switcher> -->
+          <div class="col-sm-3">
+          　　<select name="" id="" class="form-control">
+          　　  <option value="">顯示</option>
+          　　  <option value="">關閉</option>
+          　　</select>
+        　</div>
+      </div>
+      <hr>
+
+       <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">確定</button>
+        </div>
+
+        <div class="d-flex justify-content-end" (click)="goback()">
+          <button style="margin-left: 5px" class="btn btn-warning">回上一頁</button>
+        </div>
+    </form>
+
+  </nb-card-body>
+
+</nb-card>

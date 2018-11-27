@@ -1,9 +1,13 @@
-<nb-card accent="active" class="card-height-xxsmall">
-  <!-- <nb-card-header>搜尋</nb-card-header> -->
+<nb-card accent="primary" class="card-height-xxsmall">
   <nb-card-body>
-    <form>
+      <nb-card-header>會員資料</nb-card-header>
+      <hr>
+      <!-- 上方搜尋欄 -->
+      <nb-card-body>
+        <form>
       <div class="row">
         <div class="col-sm-2"></div>
+ 
         <div class="col-sm-2">
           <div class="form-group">
             <label for="searchContry">國別</label>
@@ -29,16 +33,94 @@
           </div>
         </div>
     
-         <div class="col-sm-2">
-            <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
-            <div><button type="submit" class="btn btn-primary">搜尋</button></div>
-          </div>
+        <div class="col-sm-2">
+           <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+           <div  class="d-flex justify-content-start">
+             <button type="submit" class="btn btn-primary">搜尋</button>
+             <button style="margin-left: 5px" class="btn btn-primary" (click)="HomeMadeToggle()">{{buttonName}}</button>
+            </div>
+         </div>
       </div>
-    </form>
+      
+      <!--隱藏的進階選項-->
+      <div *ngIf="show">
+        <div class="row">
+            <div class="col-sm-4">
+                <label for=""><i style="visibility: hidden" class="nb-search" ></i></label>
+                <div class="d-flex justify-content-start">
+                  <button class="btn btn-success" >新增</button>
+                  <button  style="margin-left: 5px"  class="btn btn-info" (click)="batchAdd()">批次新增</button>
+                  <button style="margin-left: 5px"  class="btn btn-primary">E-mail 送出</button>
+                </div>
+            </div>
+          <div class="col-sm-2"></div>
+            
+            <div class="col-sm-2">
+              　　　　　　　  <div class="form-group">
+              　　　　　　　    <label for="searchEmail">註冊時間</label>
+              　　　　　　　    <div class="input-group">
+              　　　　　　　        <input class="form-control" placeholder="註冊時間" name="dp" [(ngModel)]="model_2" ngbDatepicker #d="ngbDatepicker" readonly>
+              　　　　　　　        <div class="input-group-append">
+              　　　　　　　          <button class="btn-outline  fa fa-calendar-alt fa-2x" (click)="d.toggle()" type="button"></button>
+              　　　　　　　        </div>
+              　　　　　　　      </div>  
+              　　　　　　　  </div>
+            
+            </div>
+              　　　　　　　
+            <div classs="col-sm-2"> 
+              　　　　　　　  <div class="form-group">
+              　　　　　　　    <label style="visibility: hidden"> ~ </label>
+              　　　　　　　    <div class="input-group"> 
+              　　　　　　　      <div class="d-flex justify-content-center" stye="">
+              　　　　　　　         ~
+              　　　　　　　      </div>
+              　　　　　　　    </div>
+              　　　　　　　  </div>
+            </div>
+              　　　　　　　
+            <div class="col-sm-2">
+              <div class="form-group">
+               <label for="searchEmail" style="visibility: hidden">註冊時間</label>
+               <div class="input-group">
+                   <input class="form-control" placeholder="註冊時間" name="dp" [(ngModel)]="model" ngbDatepicker #d_2="ngbDatepicker" readonly>
+                   <div class="input-group-append">
+                     <button class="btn-outline  fa fa-calendar-alt fa-2x" (click)="d_2.toggle()" type="button"></button>
+                   </div>
+                </div>  
+            </div>
+          </div>
+        </div><!-- class="row"-->
+      </div><!-- ngIf="show" -->
+      
+        </form>
+      </nb-card-body>
+      
+      <!-- 下方表格 -->
+      <nb-card-body>
+          <!-- (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="test($event)" -->
+        <ng2-smart-table [settings]="settings" [source]="source" (rowSelect)="onRowSelect($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+
   </nb-card-body>
 </nb-card>
 
 
+ <!-- <nb-card accent="primary">
+    <nb-card-header>
+      會員資料
+    </nb-card-header>
+    <nb-card-body>
+        (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="test($event)" 
+      <ng2-smart-table [settings]="settings" [source]="source">
+      </ng2-smart-table>
+    </nb-card-body>
+  </nb-card> -->
+
+
+
+  
 <!--可縮放 可是 手機板 就爆炸了! -->
 <!-- <nb-accordion>
   <nb-accordion-item>
@@ -82,16 +164,6 @@
   </nb-accordion-item>
 </nb-accordion> -->
   
- <nb-card accent="primary">
-    <nb-card-header>
-      會員資料
-    </nb-card-header>
-    <nb-card-body>
-        <!-- (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="test($event)" -->
-      <ng2-smart-table [settings]="settings" [source]="source">
-      </ng2-smart-table>
-    </nb-card-body>
-  </nb-card>
 
 
 
